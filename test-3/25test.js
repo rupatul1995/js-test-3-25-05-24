@@ -16,8 +16,30 @@
 //     }
 //   console.log(i);
 // }
-
-
+// Q . 2 Write a JavaScript function that takes a string as input and returns the character that appears the most frequently. If multiple characters have the same frequency, return the first one.
+// Input:
+// "javascript"
+// Output:
+// "a"
+var str="javascript"
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<str.length; i++)
+{
+        for (var j=i; j<str.length; j++)
+        {
+                if (str[i] == str[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = str[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
 // Q. 3Create a JavaScript function that takes two arrays as input and returns a new array containing only the elements that are present in both arrays (intersection).
 // Input:
 // [1, 2, 3, 4]
